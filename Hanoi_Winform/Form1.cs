@@ -5,6 +5,11 @@ namespace Hanoi_Winform
         public Form1()
         {
             InitializeComponent();
+
+            comboBox_init();
+            pictureBox_init();
+
+            hanoiText = File.ReadAllLines(textPath);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -105,27 +110,6 @@ namespace Hanoi_Winform
                 await Task.Delay(gap_time);
                 count++;
             }
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cb_floor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cb_time_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_move_Click(object sender, EventArgs e)
-        {
-            int sel = cb_floor.SelectedIndex;
-
-            
         }
     }
 }
